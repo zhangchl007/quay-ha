@@ -1,5 +1,5 @@
 # Redhat quay HA
-https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/deploy_red_hat_quay_-_high_availability/index#install_the_ceph_object_gateway
+[Quay HA Office Docs](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploy_red_hat_quay_-_high_availability/index)
 
 # Architecture
  ![Quay HA](https://github.com/zhangchl007/quay-ha/blob/master/config/quayha01.png )
