@@ -20,7 +20,7 @@ cd /quay/config && tar -zxvf quay-config.tar.gz
 # delete the quayconfig container
 sudo sh ./pre-deleteconfig.sh
 
-# stop redis and mysql
+# stop redis 
 sudo docker-compose  -f docker-compose.config.yml stop
 
 # Quay node01 redis and quay
