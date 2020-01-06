@@ -1,10 +1,13 @@
 # Redhat quay HA
-```
-https://github.com/quay/quay/blob/master/docs/development-container.md
+https://access.redhat.com/documentation/en-us/red_hat_quay/3/html-single/deploy_red_hat_quay_-_high_availability/index#install_the_ceph_object_gateway
 
 # Architecture
  ![Quay HA](https://github.com/zhangchl007/quay-ha/blob/master/config/quayha01.png?raw=true）
- 
+```
+Quay source images
+
+https://github.com/quay/quay/blob/master/docs/development-container.md
+
 # generate self certification 
 self-cert-generate.sh test.com quay01.test.com quay02.test.com quay03.test.com registry.test.com
 
