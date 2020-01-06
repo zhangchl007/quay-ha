@@ -1,4 +1,4 @@
-# Redhat quay HA
+# Red Hat Quay HA
 [Quay HA Office Docs](https://access.redhat.com/documentation/en-us/red_hat_quay/3/html/deploy_red_hat_quay_-_high_availability/index)
 
 # Architecture
