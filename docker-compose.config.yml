@@ -1,0 +1,30 @@
+version: '3'
+services:
+  config:
+    image: quay.io/redhat/quay:v3.2.0
+    container_name: config
+    restart: always
+    privileged: true
+    networks:
+      - quay
+    ports:
+      - 8443:8443
+    depends_on:
+      - redis
+    environment:
+      - DEBUGLOG=false
+    command:
+      ["config", "redhat"]
+    depends_on:
+      - redis
+  redis:
+    image: registry.access.redhat.com/rhscl/redis-32-rhel7
+    container_name: redis
+    restart: always
+    privileged: true
+    volumes:
+      - /var/lib/redis:/var/lib/redis/data:Z
+    network_mode: host
+networks:
+  quay:
+    external: false

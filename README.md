@@ -1,12 +1,9 @@
-# docker-compose for redhat quay 
+# Redhat quay HA
 ```
-Add new environment varible "ENCRYPTED_ROBOT_TOKEN_MIGRATION_PHASE=new-installation"
-to support quay development. If it's quay enterprise, you can remove the 
-environment varible from docker-compose yaml file, Please refer to the doc below
 https://github.com/quay/quay/blob/master/docs/development-container.md
 
 # generate self certification 
-self-cert-generate.sh test.com quay01.test.com
+self-cert-generate.sh test.com quay01.test.com quay02.test.com quay03.test.com registry.test.com
 
 # Deploy Quay
 # create Directory for Quay
@@ -26,8 +23,11 @@ sudo sh ./pre-deleteconfig.sh
 # stop redis and mysql
 sudo docker-compose  -f docker-compose.config.yml stop
 
-# start mysql, redis and quay
-sudo docker-compose  -f docker-compose.quay.yml up -d
+# Quay node01 redis and quay
+sudo docker-compose  -f docker-compose.quayha.yml up -d
+
+# Quay node02/node03 quay
+sudo docker-compose -f docker-compose.quayha-noredis.yml up -d
 
 # clean up Quay
 sh clear-quay.sh

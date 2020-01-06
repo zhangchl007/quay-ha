@@ -1,0 +1,11 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth 
+subjectAltName = @alt_names
+[alt_names]
+DNS.1=test.com
+DNS.2=ceph05.test.com
+DNS.3=ceph06.test.com
+DNS.4=ceph07.test.com
+DNS.5=registry.test.com

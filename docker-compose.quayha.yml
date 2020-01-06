@@ -1,0 +1,32 @@
+version: '3'
+services:
+  quay:
+    image: quay.io/redhat/quay:v3.2.0
+    container_name: quay
+    restart: always
+    privileged: true
+    sysctls:
+      - net.core.somaxconn=4096
+    volumes:
+      - /quay/config:/conf/stack:Z
+      - /quay/storage:/datastorage:Z
+    networks:
+      - quay
+    ports:
+      - 443:8443
+      - 80:8080
+    environment:
+      - DEBUGLOG=false
+    depends_on:
+      - redis
+  redis:
+    image: registry.access.redhat.com/rhscl/redis-32-rhel7
+    container_name: redis
+    restart: always
+    privileged: true
+    volumes:
+      - /var/lib/redis:/var/lib/redis/data:Z
+    network_mode: host
+networks:
+  quay:
+    external: false
