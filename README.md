@@ -2,6 +2,9 @@
 ```
 https://github.com/quay/quay/blob/master/docs/development-container.md
 
+# Architecture
+ ![Quay HA](https://github.com/zhangchl007/quay-ha/blob/master/config/quayha01.png?raw=true）
+ 
 # generate self certification 
 self-cert-generate.sh test.com quay01.test.com quay02.test.com quay03.test.com registry.test.com
 
