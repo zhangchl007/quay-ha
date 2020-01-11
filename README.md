@@ -3,10 +3,11 @@
 
 # Architecture
  ![Quay HA](https://github.com/zhangchl007/quay-ha/blob/master/config/quayha01.png )
-```
+
 Quay Dockerfile
 
 [Quay Image Build](https://github.com/quay/quay/blob/master/docs/development-container.md)
+```
 # generate self certification 
 ./self-cert-generate.sh test.com quay01.test.com quay02.test.com quay03.test.com registry.test.com
 
